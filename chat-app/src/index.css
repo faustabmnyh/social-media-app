@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.app {
+  display: flex;
+}
+
+.homeRoutes {
+  width: 100%;
+  display: flex;
+}
+
+.progress-auth {
+  display: flex;
+  justify-content: center;
+}
+
+.progress-auth span {
+  font-size: 18px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: solid 0.35rem;
+  border-color: #003045 #003045 #00304513;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.danger-auth {
+  display: flex;
+  align-items: center;
+  color: #eb5757;
+  margin-bottom: 5px;
+  margin-top: -5px;
+}
+
+.danger-auth img {
+  max-width: 18px;
+  width: 100%;
+  margin-right: 5px;
+}
+
+@media (max-width: 500px) {
+  .homeRoutes {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,36 @@
+.deleteComment {
+  position: relative;
+}
+
+.deleteComment__settings {
+  cursor: pointer;
+}
+
+.deleteComment__settings img {
+  width: 15px;
+}
+
+.deleteComment__settingLists {
+  position: absolute;
+  background: white;
+  width: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  right: 4px;
+  top: 20px;
+  z-index: 100;
+}
+
+.deleteComment__settingLists li {
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "quicksand", Arial, Helvetica, sans-serif;
+}
+
+.deleteComment__settingLists li:hover {
+  background: rgb(231, 231, 231);
+  cursor: pointer;
+}

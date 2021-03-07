@@ -1,0 +1,132 @@
+.timelinePost {
+  background: white;
+  height: fit-content;
+  border-radius: 12px;
+  margin: 20px 0;
+  padding: 1.5rem;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timelinePost__header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.timelinePost.image {
+  padding: 0;
+}
+
+.timelinePost__user {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.timelinePost__headerSettings {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  margin-right: -10px;
+  font-size: 20px;
+}
+
+.timelinePost__headerSettings img {
+  width: 4px;
+}
+
+.timelinePost__headerSettings:hover {
+  background: whitesmoke;
+}
+
+.timelinePost__user.image {
+  padding: 1rem 1.5rem;
+}
+
+.timelinePost__person {
+  max-width: 40px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.timelinePost__text {
+  font-family: "quicksand";
+  margin-left: 15px;
+}
+
+.timelinePost__text h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.timelinePost__text p {
+  font-size: 14px;
+  color: #afafaf;
+}
+
+.timelinePost__image {
+  width: 100%;
+}
+
+.timelinePost__image img {
+  width: 100%;
+  max-height: 350px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timelinePost__contentText {
+  margin: 20px 0;
+  font-family: "poppins";
+  font-size: 15px;
+}
+
+.timelinePost__contentText.image {
+  margin: 0;
+  padding: 1rem 1.5rem;
+}
+
+/* sticker */
+.timelinePost__stickerBody {
+  font-size: 100px;
+}
+
+@media (max-width: 500px) {
+  .timelinePost__person {
+    max-width: 35px;
+  }
+
+  .timelinePost__text h3 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .timelinePost__text p {
+    font-size: 12px;
+    color: #afafaf;
+  }
+
+  .timelinePost__contentText {
+    font-size: 14px;
+  }
+
+  .timelinePost__headerSettings {
+    width: 30px;
+    height: 30px;
+  }
+
+  .timelinePost__headerSettings img {
+    width: 3px;
+  }
+
+  .timelinePost__stickerBody {
+    font-size: 70px;
+  }
+}

@@ -1,0 +1,275 @@
+.timeline {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.timeline__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 10px;
+  height: 100%;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+}
+
+.timeline__content h1 {
+  color: #003045;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: "quicksand", Arial, Helvetica, sans-serif;
+}
+
+.timeline__write {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.timeline__write.write {
+  padding: 1rem;
+  height: 250px;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: text;
+}
+
+.timeline__write.sticker {
+  padding: 1rem;
+  height: 400px;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: text;
+}
+
+.timeline__write input {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-size: 16px;
+  font-family: "quicksand", Arial, Helvetica, sans-serif;
+  outline: none;
+  cursor: pointer;
+}
+
+.timeline__writePost {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline__writePostStiker {
+  width: fit-content;
+  position: relative;
+}
+
+.timeline__writePostStiker p {
+  font-size: 100px;
+  padding: 20px;
+}
+
+.timeline__writePostStiker span {
+  position: absolute;
+  top: 0;
+  color: #003045;
+  cursor: pointer;
+  right: 0;
+}
+
+.timeline__writePost textarea {
+  resize: none;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: "quicksand", Arial, Helvetica, sans-serif;
+}
+
+.timeline__utilContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.timeline__utilContainer.write {
+  width: fit-content;
+}
+
+.timeline__iconContainer {
+  display: flex;
+  align-items: center;
+}
+
+.timeline__icon {
+  max-width: 20px;
+  width: 100%;
+  margin-right: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.timeline__icon.write {
+  margin: 0;
+}
+
+.timeline__sticker {
+  max-width: 25px;
+  width: 100%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.timeline__utilContainer button {
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  color: #afafaf;
+  margin-left: 10px;
+  font-family: "quicksand", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.timeline__btnSend {
+  background: #003045 !important;
+  color: white !important;
+  transition: 0.3s all;
+}
+
+.timeline__btnSend:disabled {
+  background: #efefef !important;
+  color: #afafaf !important;
+}
+
+.timeline__progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #003045;
+  width: 100%;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+
+.timeline__progress span {
+  font-size: 30px;
+}
+
+/* sticker */
+
+.timeline__sticker {
+  margin-top: 5px;
+  width: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.timeline__stickerContainer {
+  position: relative;
+  padding: 0.5rem;
+}
+
+.timeline__stickerContent {
+  position: absolute;
+  display: none;
+  flex-wrap: wrap;
+  opacity: 0;
+  align-items: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 15px;
+  max-height: 100px;
+  background: white;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  right: -130px;
+  bottom: -87px;
+  transition: 0.5s;
+  z-index: 80;
+}
+
+.timeline__stickerContent p {
+  font-size: 25px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.timeline__stickerContent p:hover {
+  box-sizing: border-box;
+  font-size: 28px;
+  margin-top: -5px;
+}
+
+.timeline__stickerContainer:hover .timeline__stickerContent {
+  display: flex;
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  .timeline {
+    padding-top: 4rem;
+  }
+
+  .timeline__content h1 {
+    font-size: 25px;
+  }
+
+  .timeline__write {
+    height: 10px;
+  }
+
+  .timeline__write input {
+    font-size: 14px;
+  }
+
+  .timeline__icon {
+    max-width: 18px;
+    width: 100%;
+    margin-right: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .timeline__sticker {
+    max-width: 21px;
+    margin-right: 0px;
+  }
+
+  .timeline__utilContainer button {
+    width: 75px;
+    height: 30px;
+    border-radius: 5px;
+  }
+
+  .timeline__writePost textarea {
+    font-size: 14px;
+  }
+
+  .timeline__writePostStiker p {
+    font-size: 70px;
+    padding: 20px;
+  }
+  
+}

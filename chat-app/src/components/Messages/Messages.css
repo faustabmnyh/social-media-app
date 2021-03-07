@@ -1,0 +1,60 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.messages__content {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  height: 100%;
+  margin-bottom: 20px;
+}
+.messages__content.no-selected {
+  overflow-y: hidden;
+}
+
+.messages__content::-webkit-scrollbar {
+  display: none;
+}
+/* no nmessages and no selected */
+
+.messages__noSelected {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+}
+.messages__noSelectedImg {
+  max-width: 450px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.messages__selectTitle {
+  font-size: 20px;
+  color: #003049;
+}
+
+.messages__selectSubTitle {
+  color: rgb(192, 192, 192);
+}
+
+.messages__firstConnectImg {
+  max-width: 380px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+  .messages {
+    padding: 1rem;
+    padding-top: 5.5rem;
+  }
+}

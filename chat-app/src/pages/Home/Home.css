@@ -1,0 +1,28 @@
+.home {
+  display: flex;
+  width: 100%;
+}
+
+.home__left,
+.home__leftResponsive {
+  flex: 1 1 15rem;
+}
+
+.home__right,
+.home__rightResponsive {
+  flex: 3 1 30rem;
+}
+
+.home__responsive {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .home {
+    display: none;
+  }
+  .home__responsive {
+    display: flex;
+    width: 100%;
+  }
+}

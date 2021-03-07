@@ -1,0 +1,121 @@
+.inputMessages__form {
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.inputMessages__form input {
+  font-family: "poppins";
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 30px;
+  padding: 0 1rem;
+}
+
+.inputMessages__icons {
+  display: flex;
+}
+
+.inputMessages__icons span {
+  font-size: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.inputMessages__add {
+  margin-right: 15px;
+  max-width: 20px;
+  margin-left: 5px;
+}
+
+.inputMessages__send {
+  max-width: 20px;
+  margin-right: 20px;
+}
+
+.inputMessages__sticker {
+  margin-top: 5px;
+  max-width: 25px;
+}
+
+.inputMessages__send:hover,
+.inputMessages__sticker:hover,
+.inputMessages__add:hover {
+  cursor: pointer;
+}
+
+/* stciker */
+.inputMessages__stickerContainer {
+  position: relative;
+  padding: 0.5rem;
+}
+
+.inputMessages__stickerContent {
+  position: absolute;
+  display: none;
+  flex-wrap: wrap;
+  opacity: 0;
+  align-items: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  width: 200px;
+  border-radius: 15px;
+  max-height: 100px;
+  background: white;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+  right: -85px;
+  bottom: 45px;
+  transition: 0.5s;
+}
+
+.inputMessages__stickerContent p {
+  font-size: 25px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.inputMessages__stickerContent p:hover {
+  box-sizing: border-box;
+  font-size: 28px;
+  margin-top: -5px;
+}
+
+.inputMessages__stickerContainer:hover .inputMessages__stickerContent {
+  display: flex;
+  opacity: 1;
+}
+
+@media (max-width: 375px) {
+  .inputMessages__form input {
+    font-family: "poppins";
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 30px;
+    padding: 0 1rem;
+  }
+
+  .inputMessages__sticker {
+    max-width: 20px;
+  }
+
+  .inputMessages__add {
+    margin-right: 10px;
+    max-width: 16px;
+    margin-left: 0px;
+  }
+
+  .inputMessages__send {
+    max-width: 15px;
+    margin-right: 20px;
+  }
+}

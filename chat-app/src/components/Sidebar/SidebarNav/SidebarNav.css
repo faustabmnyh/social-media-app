@@ -1,0 +1,220 @@
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  max-width: 80px;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebarNav__up,
+.sidebarNav__down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sidebarNav__imgLogo {
+  max-width: 50px;
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.sidebarNav__icon {
+  position: relative;
+  width: 100%;
+  max-width: 30px;
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+.sidebarNav__icon img {
+  max-width: 23px;
+  width: 100%;
+  margin-left: 3px;
+}
+
+.sidebarNav__icon.active::after {
+  position: absolute;
+  content: "";
+  right: -26px;
+  top: -15px;
+  border: 1px solid #003049;
+  height: 60px;
+}
+
+.sidebarNav__icon:hover.sidebarNav__icon::after {
+  position: absolute;
+  content: "";
+  right: -26px;
+  top: -15px;
+  border: 1px solid #003049;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.sidebar__userImage {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.sidebarNav__profile {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sidebarNav__profile.active::after {
+  position: absolute;
+  content: "";
+  right: -17px;
+  top: -12px;
+  border: 1px solid #003049;
+  height: 60px;
+}
+
+.sidebarNav__profile:hover.sidebarNav__profile::after {
+  position: absolute;
+  content: "";
+  right: -17px;
+  top: -12px;
+  width: 0;
+  border: 1px solid #003049;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.sidebarNav__responsive {
+  display: none;
+}
+
+.sidebarNav__back {
+  display: none;
+}
+
+.sidebarNav__username {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .sidebarNav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 111;
+    align-items: center;
+    flex-direction: row;
+    max-width: initial;
+    width: 100%;
+    height: 70px;
+  }
+
+  .sidebarNav__up,
+  .sidebarNav__down {
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .sidebarNav__username {
+    display: initial;
+    font-size: 18px;
+  }
+
+  .sidebarNav__imgLogo {
+    max-width: 40px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+  .sidebarNav__back {
+    display: initial;
+  }
+
+  .sidebarNav__responsive {
+    display: flex;
+  }
+
+  .sidebarNav__responsive span {
+    font-size: 25px;
+  }
+
+  .sidebarNav__navbar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: white;
+    right: 0;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: -2px 0px 20px rgba(0, 0, 0, 0.1);
+    animation: slideNav 0.5s ease;
+  }
+
+  .sidebarNav__navbar span {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+  }
+
+  .sidebarNav__navbar ul {
+    margin-top: 20px;
+  }
+
+  .sidebarNav__navbarIcon {
+    padding: 0.8rem;
+  }
+
+  .sidebarNav__navbarIcon.active {
+    background: rgba(100, 100, 100, 0.2);
+  }
+
+  .sidebarNav__icon {
+    display: none;
+  }
+
+  .sidebarNav__icon img {
+    display: none;
+  }
+
+  .sidebarNav__icon.active::after {
+    display: none;
+  }
+
+  .sidebarNav__icon:hover.sidebarNav__icon::after {
+    display: none;
+  }
+
+  .sidebar__userImage {
+    display: none;
+  }
+
+  .sidebarNav__profile {
+    display: none;
+  }
+
+  .sidebarNav__profile.active::after {
+    display: none;
+  }
+
+  .sidebarNav__profile:hover.sidebarNav__profile::after {
+    display: none;
+  }
+}
+
+@keyframes slideNav {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

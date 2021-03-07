@@ -1,0 +1,49 @@
+.commentIcons__contentIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.commentIcons__contentIcons.image {
+  padding: 0rem 1.5rem;
+}
+
+.commentIcons__contentIcons p {
+  font-family: "quicksand", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #afafaf;
+}
+
+.commentIcons__iconsIcon {
+  display: flex;
+  align-items: center;
+}
+
+.commentIcons__icon {
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 22px;
+  color: black;
+}
+
+.commentIcons__icon.likes {
+  color: #eb5056;
+}
+
+.commentIcons__icon.image {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+  .commentIcons__contentIcons p {
+    font-size: 12px;
+  }
+
+  .commentIcons__icon {
+    margin-right: 15px;
+    cursor: pointer;
+    max-width: 22px;
+    font-size: 20px;
+  }
+}
