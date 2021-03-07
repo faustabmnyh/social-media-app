@@ -14,10 +14,7 @@ const server = new ApolloServer({
 });
 
 mongoose
-  .connect(
-    "mongodb+srv://fausta:lEWwAm1BixcLwrme@cluster0.uzb0m.mongodb.net/chat-app?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+  .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("DB Connected");
     return server.listen({ port: PORT });
